@@ -18,18 +18,14 @@ class WebSearchViewController: UIViewController, ViewPresentableProtocol {
     @IBOutlet weak var reloadButton: UIBarButtonItem!
     @IBOutlet weak var goForwardButton: UIBarButtonItem!
     
-    
     var destinationURL: String = "https://www.daum.net"
     var backgroundColor: UIColor = .systemGray5
     static let identifiers: String = "WebSearchViewController"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         openWebPage(url: destinationURL)
         searchBar.delegate = self
-//        configureBarItem()
-        
     }
     
     // MARK: - 웹페이지 열기 메서드
@@ -43,7 +39,6 @@ class WebSearchViewController: UIViewController, ViewPresentableProtocol {
     }
     
     // MARK: - tool bar item 액션 설정
-    
     @IBAction func closeButtonClicked(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil)
     }
