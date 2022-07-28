@@ -1,24 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebViewPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeY-3q-gTM">
+                                <rect key="frame" x="155.5" y="416.5" width="103" height="63"/>
+                                <color key="backgroundColor" red="0.95676803629999996" green="1" blue="0.70344422569999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="h5h-TG-Twg"/>
+                                    <constraint firstAttribute="height" constant="63" id="kZN-O2-zAB"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oeY-3q-gTM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AhP-OJ-6d2"/>
+                            <constraint firstItem="oeY-3q-gTM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kEA-kl-lI1"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="53.571428571428569"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LkK-oz-ofs">
+            <objects>
+                <viewController id="v1t-8W-833" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O9T-lN-RTN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="h6x-PC-uMG">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="iLI-D6-GnH"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iDm-14-Kd6">
+                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="slw-ne-ygI"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" id="Xl6-NX-Beu"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="COk-bv-l6Z"/>
+                                    <barButtonItem title="Item" id="pga-br-VAq"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qqB-Fk-pSv"/>
+                                    <barButtonItem title="Item" id="aUa-4X-UQc"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="PXO-8f-H42"/>
+                                    <barButtonItem title="Item" id="q9U-Zb-X0U"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="J2B-q9-uB4"/>
+                                </items>
+                            </toolbar>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hed-fb-FZ2">
+                                <rect key="frame" x="0.0" y="88" width="414" height="714"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dof-6Y-uIt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hed-fb-FZ2" firstAttribute="leading" secondItem="dof-6Y-uIt" secondAttribute="leading" id="2la-pu-XsS"/>
+                            <constraint firstItem="h6x-PC-uMG" firstAttribute="top" secondItem="dof-6Y-uIt" secondAttribute="top" id="8U5-Sz-KxE"/>
+                            <constraint firstItem="iDm-14-Kd6" firstAttribute="leading" secondItem="dof-6Y-uIt" secondAttribute="leading" id="Dvc-db-nsq"/>
+                            <constraint firstItem="h6x-PC-uMG" firstAttribute="leading" secondItem="dof-6Y-uIt" secondAttribute="leading" id="GDp-1B-B6v"/>
+                            <constraint firstItem="dof-6Y-uIt" firstAttribute="bottom" secondItem="iDm-14-Kd6" secondAttribute="bottom" id="Jdt-3b-Nja"/>
+                            <constraint firstItem="iDm-14-Kd6" firstAttribute="trailing" secondItem="dof-6Y-uIt" secondAttribute="trailing" id="Nwl-Pd-tdS"/>
+                            <constraint firstAttribute="trailing" secondItem="h6x-PC-uMG" secondAttribute="trailing" id="Zjn-hv-nXH"/>
+                            <constraint firstItem="dof-6Y-uIt" firstAttribute="trailing" secondItem="Hed-fb-FZ2" secondAttribute="trailing" id="dOY-K1-Ww1"/>
+                            <constraint firstItem="iDm-14-Kd6" firstAttribute="top" secondItem="Hed-fb-FZ2" secondAttribute="bottom" id="nv8-Ic-Qz6"/>
+                            <constraint firstItem="Hed-fb-FZ2" firstAttribute="top" secondItem="h6x-PC-uMG" secondAttribute="bottom" id="z3d-94-GSE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="32w-TJ-vrx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="814" y="54"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
