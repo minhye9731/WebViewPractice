@@ -28,7 +28,7 @@ class WebSearchViewController: UIViewController, ViewPresentableProtocol {
         
         openWebPage(url: destinationURL)
         searchBar.delegate = self
-        
+//        configureBarItem()
         
     }
     
@@ -42,45 +42,36 @@ class WebSearchViewController: UIViewController, ViewPresentableProtocol {
         webView.load(request)
     }
     
-    // MARK: - tool bar item UI 설정
-    func configureBarItem() {
-        closeButton = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: nil)
-        
-        goBackButton = UIBarButtonItem(image: UIImage(systemName: "arrow.left"), style: .plain, target: self, action: #selector(goBackButtonClicked))
-        
-        reloadButton = UIBarButtonItem(image: UIImage(systemName: "arrow.clockwise"), style: .plain, target: self, action: #selector(reloadButtonClicked))
-        
-        goForwardButton = UIBarButtonItem(image: UIImage(systemName: "arrow.right"), style: .plain, target: self, action: #selector(goForwardButtonClicked))
+    // MARK: - tool bar item 액션 설정
+    
+    @IBAction func closeButtonClicked(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
     
-    @objc
-    func goBackButtonClicked() {
-        
+    @IBAction func goBackButtonClicked(_ sender: UIBarButtonItem) {
+        if webView.canGoBack {
+            webView.goBack()
+        }
+    }
+    
+    @IBAction func reloadButtonClicked(_ sender: UIBarButtonItem) {
+        webView.reload()
+    }
+    
+    @IBAction func goForwardButtonClicked(_ sender: UIBarButtonItem) {
+        if webView.canGoForward {
+            webView.goForward()
+        }
     }
 
-    
-    @objc
-    func reloadButtonClicked() {
-        
-        
-    }
-    
-    @objc
-    func goForwardButtonClicked() {
-        
-        
-    }
 }
 
-
+// MARK: - search bar 액션 연결
 extension WebSearchViewController : UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         openWebPage(url: searchBar.text!)
     }
-    
-    
-    
     
 }
 

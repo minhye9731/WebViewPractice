@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -61,23 +62,43 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iDm-14-Kd6">
-                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="slw-ne-ygI"/>
+                                    <constraint firstAttribute="height" constant="44" id="slw-ne-ygI"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Item" id="Xl6-NX-Beu"/>
+                                    <barButtonItem image="xmark" catalog="system" style="plain" id="Xl6-NX-Beu">
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <connections>
+                                            <action selector="closeButtonClicked:" destination="v1t-8W-833" id="Fvz-NV-DlU"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="COk-bv-l6Z"/>
-                                    <barButtonItem title="Item" id="pga-br-VAq"/>
+                                    <barButtonItem image="arrow.left" catalog="system" style="plain" id="pga-br-VAq">
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <connections>
+                                            <action selector="goBackButtonClicked:" destination="v1t-8W-833" id="i8B-X0-aPw"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="qqB-Fk-pSv"/>
-                                    <barButtonItem title="Item" id="aUa-4X-UQc"/>
+                                    <barButtonItem image="arrow.clockwise" catalog="system" style="plain" id="aUa-4X-UQc">
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <connections>
+                                            <action selector="reloadButtonClicked:" destination="v1t-8W-833" id="XmB-r0-MAj"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="PXO-8f-H42"/>
-                                    <barButtonItem title="Item" id="q9U-Zb-X0U"/>
+                                    <barButtonItem image="arrow.right" catalog="system" style="plain" id="q9U-Zb-X0U">
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <connections>
+                                            <action selector="goForwardButtonClicked:" destination="v1t-8W-833" id="HLo-tT-iFZ"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="J2B-q9-uB4"/>
                                 </items>
                             </toolbar>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hed-fb-FZ2">
-                                <rect key="frame" x="0.0" y="88" width="414" height="714"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="730"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -115,6 +136,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
