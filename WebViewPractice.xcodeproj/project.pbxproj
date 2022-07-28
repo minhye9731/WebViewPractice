@@ -13,6 +13,8 @@
 		0E30A6C1289299AF002A8769 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E30A6BF289299AF002A8769 /* Main.storyboard */; };
 		0E30A6C3289299B1002A8769 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E30A6C2289299B1002A8769 /* Assets.xcassets */; };
 		0E30A6C6289299B1002A8769 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E30A6C4289299B1002A8769 /* LaunchScreen.storyboard */; };
+		0E30A6CE28929C73002A8769 /* WebSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E30A6CD28929C73002A8769 /* WebSearchViewController.swift */; };
+		0E30A6D028929D06002A8769 /* ViewPresentableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E30A6CF28929D06002A8769 /* ViewPresentableProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		0E30A6C2289299B1002A8769 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E30A6C5289299B1002A8769 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E30A6C7289299B1002A8769 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E30A6CD28929C73002A8769 /* WebSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSearchViewController.swift; sourceTree = "<group>"; };
+		0E30A6CF28929D06002A8769 /* ViewPresentableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPresentableProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				0E30A6BB289299AF002A8769 /* SceneDelegate.swift */,
 				0E30A6BD289299AF002A8769 /* ViewController.swift */,
 				0E30A6BF289299AF002A8769 /* Main.storyboard */,
+				0E30A6CD28929C73002A8769 /* WebSearchViewController.swift */,
+				0E30A6CF28929D06002A8769 /* ViewPresentableProtocol.swift */,
 				0E30A6C2289299B1002A8769 /* Assets.xcassets */,
 				0E30A6C4289299B1002A8769 /* LaunchScreen.storyboard */,
 				0E30A6C7289299B1002A8769 /* Info.plist */,
@@ -140,7 +146,9 @@
 			files = (
 				0E30A6BE289299AF002A8769 /* ViewController.swift in Sources */,
 				0E30A6BA289299AE002A8769 /* AppDelegate.swift in Sources */,
+				0E30A6D028929D06002A8769 /* ViewPresentableProtocol.swift in Sources */,
 				0E30A6BC289299AF002A8769 /* SceneDelegate.swift in Sources */,
+				0E30A6CE28929C73002A8769 /* WebSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

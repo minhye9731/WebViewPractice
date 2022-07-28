@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebViewPractice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" title="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="WebViewPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,6 +28,9 @@
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2xJ-Le-4Rm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -42,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="53.571428571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--WebSearchViewController-->
         <scene sceneID="LkK-oz-ofs">
             <objects>
-                <viewController id="v1t-8W-833" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WebSearchViewController" title="WebSearchViewController" id="v1t-8W-833" customClass="WebSearchViewController" customModule="WebViewPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O9T-lN-RTN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,6 +100,14 @@
                             <constraint firstItem="Hed-fb-FZ2" firstAttribute="top" secondItem="h6x-PC-uMG" secondAttribute="bottom" id="z3d-94-GSE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="closeButton" destination="Xl6-NX-Beu" id="IKu-HH-e6D"/>
+                        <outlet property="goBackButton" destination="pga-br-VAq" id="1YY-5r-7Gx"/>
+                        <outlet property="goForwardButton" destination="q9U-Zb-X0U" id="QyS-RN-OO2"/>
+                        <outlet property="reloadButton" destination="aUa-4X-UQc" id="ulx-WJ-Nz8"/>
+                        <outlet property="searchBar" destination="h6x-PC-uMG" id="0ki-qa-HDd"/>
+                        <outlet property="webView" destination="Hed-fb-FZ2" id="fbO-r3-ISC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="32w-TJ-vrx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
